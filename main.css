@@ -1,0 +1,64 @@
+body {
+  font-family: poppins;
+}
+
+header .carousel-inner .item {
+  max-height: 1000px;
+  height: auto;
+
+  max-width: 1000px;
+  width: auto;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+header .carousel-inner .item img {
+  width: 100%;
+}
+.carousel-caption {
+  padding-bottom: 250px;
+}
+.carousel-caption h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.carousel-control.right {
+  background-image: none;
+}
+.carousel-control.left {
+  background-image: none;
+}
+.button {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  padding: 1em 2em;
+  border: 1px black solid;
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+.button::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.button:hover::before {
+  --size: 400px;
+}
